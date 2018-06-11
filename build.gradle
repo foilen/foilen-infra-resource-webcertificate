@@ -33,13 +33,14 @@ eclipse {
   }
 }
 
-dependencies {
-  compileOnly "com.foilen:foilen-infra-plugin-core:$foilenInfraPluginVersion"
+configurations {
+	testCompile.extendsFrom compileOnly
+}
 
-  compileOnly "com.foilen:foilen-infra-resource-domain:0.1.0"
-  
-  testCompile "com.foilen:foilen-infra-plugin-core:$foilenInfraPluginVersion"
-  testCompile "junit:junit:4.12"
+dependencies {
+  compileOnly "com.foilen:foilen-infra-system-core-system-fake:$foilenInfraSystemVersion"
+
+  compileOnly "com.foilen:foilen-infra-resource-domain:0.1.1"
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
