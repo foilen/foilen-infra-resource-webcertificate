@@ -22,7 +22,7 @@ public class FoilenWebCertificatesPluginDefinitionProvider implements IPPluginDe
     public IPPluginDefinitionV1 getIPPluginDefinition() {
         IPPluginDefinitionV1 pluginDefinitionV1 = new IPPluginDefinitionV1("Foilen", "Web Certificate", "To manage web certificates", "1.0.0");
 
-        pluginDefinitionV1.addCustomResource(WebsiteCertificate.class, "Website Certificate", //
+        pluginDefinitionV1.addCustomResource(WebsiteCertificate.class, WebsiteCertificate.RESOURCE_TYPE, //
                 Arrays.asList(WebsiteCertificate.PROPERTY_THUMBPRINT), //
                 Arrays.asList( //
                         WebsiteCertificate.PROPERTY_THUMBPRINT, //

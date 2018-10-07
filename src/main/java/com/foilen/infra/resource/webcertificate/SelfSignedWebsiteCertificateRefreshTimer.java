@@ -42,7 +42,7 @@ public class SelfSignedWebsiteCertificateRefreshTimer extends AbstractBasics imp
                 resourceService.createResourceQuery(WebsiteCertificate.class) //
                         .addEditorEquals(SelfSignedWebsiteCertificateEditor.EDITOR_NAME) //
                         .propertyLesserAndEquals(WebsiteCertificate.PROPERTY_END, DateTools.addDate(Calendar.WEEK_OF_YEAR, 1) //
-                ));
+                        ));
 
         // Update them
         logger.info("Got {} certificates to update", certificatesToUpdate.size());

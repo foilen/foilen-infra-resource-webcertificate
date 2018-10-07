@@ -38,6 +38,8 @@ import com.google.common.collect.ComparisonChain;
  */
 public class WebsiteCertificate extends AbstractIPResource implements Comparable<WebsiteCertificate> {
 
+    public static final String RESOURCE_TYPE = "Website Certificate";
+
     public static final String PROPERTY_THUMBPRINT = "thumbprint";
     public static final String PROPERTY_DOMAIN_NAMES = "domainNames";
     public static final String PROPERTY_CA_CERTIFICATE = "caCertificate";
